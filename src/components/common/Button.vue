@@ -11,8 +11,17 @@
   border-radius: 4px;
   color: white;
   font-size: 16px;
+  line-height: 16px;
   font-weight: bold;
   box-shadow: none;
+  transition: $transitionDefaultTime;
+  &:hover {
+    scale: 1.05;
+  }
+  &:active {
+    transition: 0.05s;
+    scale: 1;
+  }
 }
 </style>
 <script setup></script>

@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .contactPhone {
   padding: 4px;
   padding-right: 20px;
@@ -31,3 +31,6 @@
   }
 }
 </style>
+<script setup>
+import IconPhone from '@/components/icons/IconPhone.vue'
+</script>

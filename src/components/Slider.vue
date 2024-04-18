@@ -86,6 +86,9 @@ export default {
         height: 40px;
         &.counter {
           margin-right: 12px;
+          span {
+            color: white;
+          }
         }
         &.socialLink {
           padding-right: 40px;
@@ -94,9 +97,9 @@ export default {
     }
     .logo {
       position: absolute;
-      left: 38px;
-      bottom: 7px;
-      scale: 1.6;
+      left: 43px;
+      bottom: 8px;
+      scale: 1.66;
     }
 
     .arrowWrapper {

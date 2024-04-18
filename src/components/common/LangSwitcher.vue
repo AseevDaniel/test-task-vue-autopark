@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .langSwitcher {
   margin: 0 20px;
   display: flex;
