@@ -45,9 +45,9 @@
 </template>
 
 <script>
-import IconArrow from './icons/IconArrowDown.vue'
-import IconYoutube from './icons/IconYoutubeRed.vue'
-import IconLogo from './icons/IconAutoparkLogo.vue'
+import IconArrow from '../icons/IconArrowDown.vue'
+import IconYoutube from '../icons/IconYoutubeRed.vue'
+import IconLogo from '../icons/IconAutoparkLogo.vue'
 export default {
   components: {
     IconArrow,
@@ -171,11 +171,12 @@ export default {
       width: 180px;
       object-fit: cover;
       cursor: pointer;
+      transition: $transitionDefaultTime;
       &:not(:last-child) {
         margin-right: 12px;
       }
       &.activeImage {
-        border: 2px solid $mainColor;
+        filter: brightness(50%);
       }
     }
   }

@@ -1,0 +1,1 @@
+export const DEFAULT_CONTACT_PHONE = '067-322-16-63'

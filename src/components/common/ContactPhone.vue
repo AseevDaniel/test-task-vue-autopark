@@ -1,9 +1,14 @@
+<script setup>
+import IconPhone from '@/components/icons/IconPhone.vue'
+import { DEFAULT_CONTACT_PHONE } from '@/constants/contacts.js'
+</script>
+
 <template>
   <div class="contactPhone clickableItem">
     <div class="phoneIconContainer">
       <IconPhone color="white" />
     </div>
-    067-322-16-63
+    {{ DEFAULT_CONTACT_PHONE }}
   </div>
 </template>
 
@@ -31,6 +36,3 @@
   }
 }
 </style>
-<script setup>
-import IconPhone from '@/components/icons/IconPhone.vue'
-</script>

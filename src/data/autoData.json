@@ -4,7 +4,6 @@
   "model": "Edge",
   "year": "2016",
   "priceUSD": "62490",
-  "postDate": "14.12.2023",
   "registrationNumber": "AH 1111 HA",
   "vin": "tnban4ne3lb007941",
   "images": [
@@ -15,10 +14,25 @@
     "https://i.ibb.co/zrcsB0M/photo3.png",
     "https://i.ibb.co/zrcsB0M/photo3.png"
   ],
-  "views": 20,
-  "saved": 50,
-  "phoneCheck": 17,
-  "vinCheck": 17,
+  "tags": [
+    "Все про авто",
+    "Характеристики",
+    "Дополнительно",
+    "Салон",
+    "Оптика",
+    "Кузов",
+    "Система помощи при парковке",
+    "Безопасность",
+    "Мультимедиа" ,
+    "Отзывы"
+  ],
+  "postInfo": {
+    "postDate": "18.04.2024",
+    "views": 20,
+    "saved": 50,
+    "phoneCheck": 17,
+    "vinCheck": 17
+  },
   "vehicleSpecifications": {
     "mileage": 180000,
     "engineCapacity": 2.7,

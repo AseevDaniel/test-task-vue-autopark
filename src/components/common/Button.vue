@@ -16,11 +16,11 @@
   box-shadow: none;
   transition: $transitionDefaultTime;
   &:hover {
-    scale: 1.05;
+    filter: brightness(1.1);
   }
   &:active {
     transition: 0.05s;
-    scale: 1;
+    scale: 0.95;
   }
 }
 </style>
