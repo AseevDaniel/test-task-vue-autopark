@@ -200,7 +200,6 @@
     local('Proxima Nova Regular'),
     url(@/assets/fonts/ProximaNova/ProximaNova-Regular.ttf) format('truetype');
   font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: 'Proxima Nova';
@@ -208,4 +207,11 @@
     local('Proxima Nova Bold'),
     url(@/assets/fonts/ProximaNova/ProximaNova-Bold.ttf) format('truetype');
   font-weight: bold;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src:
+     local('Proxima Nova SemiBold'),
+     url(@/assets/fonts/ProximaNova/ProximaNova-SemiBold.ttf) format('truetype');
+  font-weight: 600;
 }

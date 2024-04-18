@@ -94,8 +94,9 @@ export default {
     }
     .logo {
       position: absolute;
-      left: -4px;
-      bottom: 0;
+      left: 38px;
+      bottom: 7px;
+      scale: 1.6;
     }
 
     .arrowWrapper {
@@ -108,7 +109,7 @@ export default {
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: 0.3s;
+      transition: $transitionDefaultTime;
       &:hover {
         scale: 1.1;
       }
@@ -166,6 +167,7 @@ export default {
       height: 100%;
       width: 180px;
       object-fit: cover;
+      cursor: pointer;
       &:not(:last-child) {
         margin-right: 12px;
       }

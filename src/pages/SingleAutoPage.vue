@@ -1,12 +1,19 @@
 <script setup>
 import autoData from '@/data/autoData.json'
 import Slider from '@/components/Slider.vue'
+import PreHeader from '@/components/layout/PreHeader.vue'
+import Header from '@/components/layout/Header.vue'
 </script>
 
 <template>
-  <div class="container">
+  <section class="container">
+    <PreHeader />
+    <Header />
+  </section>
+
+  <section class="container">
     <Slider :images="autoData.images" />
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss"></style>

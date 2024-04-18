@@ -1,4 +1,15 @@
 // colors
 
+$bgColor: #f9f9f9;
 $mainColor: #e73a3f;
+$disabled: #bbbbbb;
 $colorThemeDark: #161616;
+$secondColor: #40A600;
+
+// animations
+
+$transitionDefaultTime: .3s;
+
+// shadows
+$defaultShadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+$defaultTextShadow: 0px 4px 4px rgba(0,0,0,0.25);
