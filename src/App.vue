@@ -1,12 +1,9 @@
 <script setup>
-import autoData from './data/autoData.json'
-import Slider from './components/Slider.vue'
-
-console.log(autoData)
+import SingleAutoPage from './pages/SingleAutoPage.vue'
 </script>
 
 <template>
-  <Slider :images="autoData.images" />
+  <SingleAutoPage />
 </template>
 
 <style scoped></style>
