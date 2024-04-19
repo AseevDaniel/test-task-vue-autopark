@@ -20,11 +20,17 @@ export default {
   &.v-breadcrumbs {
     padding: 0;
     .v-breadcrumbs-item {
+      cursor: pointer;
+      transition: $transitionDefaultTime;
+      &:hover {
+        color: $mainColor;
+      }
       &:first-child {
         padding-left: 0;
       }
       &.v-breadcrumbs-item--disabled {
         opacity: 1;
+        pointer-events: initial;
       }
     }
     .v-breadcrumbs-divider {
