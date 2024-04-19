@@ -3,7 +3,32 @@
   "brand": "Ford",
   "model": "Edge",
   "year": "2016",
-  "priceUSD": "62490",
+  "priceList": [
+    {
+      "currency": "ГРН",
+      "cyrrencySymbol": "₴",
+      "value": 2486130,
+      "creditValue": 20330
+    },
+    {
+      "currency": "USD",
+      "cyrrencySymbol": "$",
+      "value": 62490,
+      "creditValue": 511
+    },
+    {
+      "currency": "EUR",
+      "cyrrencySymbol": "€",
+      "value": 58684,
+      "creditValue": 480
+    },
+    {
+      "currency": "CRYPTO",
+      "cyrrencySymbol": "₿",
+      "value": 3,
+      "creditValue": 0.025
+    }
+  ],
   "registrationNumber": "AH 1111 HA",
   "vin": "tnban4ne3lb007941",
   "images": [

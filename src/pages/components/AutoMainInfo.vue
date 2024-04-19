@@ -7,7 +7,11 @@
         <IconBookmark class="clickableItem" />
       </div>
     </div>
-    <div class="priceSection"></div>
+    <div class="idSection">
+      <span class="autoId">Код товара: {{ autoInfo.id }}</span>
+      <span class="location">{{ autoInfo.location }}</span>
+    </div>
+    <AutoPriceSection :priceList="autoInfo.priceList" />
     <div class="connectSection"></div>
     <div class="servicesSection">
       <ServiceItem service-title="Тест драйв" />
@@ -20,10 +24,10 @@
 import ServiceItem from '@/components/common/ServiceItem.vue'
 import IconShare from '@/components/icons/IconShare.vue'
 import IconBookmark from '@/components/icons/IconBookmark.vue'
-import { computed } from 'vue'
-
+import AutoPriceSection from '@/pages/components/AutoPriceSection.vue'
 export default {
   components: {
+    AutoPriceSection,
     ServiceItem,
     IconShare,
     IconBookmark
@@ -53,6 +57,24 @@ export default {
         &:not(:last-child) {
           margin-right: 4px;
         }
+      }
+    }
+  }
+  .idSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $disabled-opacity;
+    span {
+      font-size: 18px;
+      &.autoId {
+        color: $colorThemeDark;
+        opacity: 0.6;
+      }
+      &.location {
+        color: black;
       }
     }
   }
