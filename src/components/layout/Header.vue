@@ -10,7 +10,7 @@ import MainMenu from '@/components/common/MainMenu.vue'
 
     <MainMenu />
 
-    <Button @click="console.log('')">Войти</Button>
+    <Button>Войти</Button>
   </header>
 </template>
 
@@ -22,5 +22,8 @@ import MainMenu from '@/components/common/MainMenu.vue'
   margin-top: 20px;
   height: 50px;
   box-shadow: $menuShadow;
+  .button {
+    width: 176px;
+  }
 }
 </style>

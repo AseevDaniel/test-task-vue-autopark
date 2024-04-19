@@ -1,5 +1,5 @@
-@import './shared.scss';
 @import './variables.scss';
+@import './shared.scss';
 @import './mixins.scss';
 @import '../fonts/ProximaNova/font.scss';
 
@@ -15,17 +15,4 @@
 
 body{
   background-color: $bgColor;
-}
-
-.container {
-  width: min(1180px, 100vw);
-  margin: 0 auto;
-}
-
-.clickableItem{
-  cursor: pointer;
-  transition: $transitionDefaultTime;
-  &:hover {
-    scale: 1.1;
-  }
 }

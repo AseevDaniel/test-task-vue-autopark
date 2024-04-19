@@ -2,7 +2,7 @@
   <v-dialog max-width="500">
     <template v-slot:activator="{ props: activatorProps }">
       <div class="serviceButton" v-bind="activatorProps">
-        <Component :is="serviceIcon" />
+        <Component class="serviceIcon" :is="serviceIcon" />
         {{ serviceTitle }}
       </div>
     </template>
@@ -29,12 +29,18 @@ export default {
 
 <style scoped lang="scss">
 .serviceButton {
-  padding: 10px 24px;
+  padding: 6px 10px;
   font-size: 16px;
   font-weight: bold;
   border: 2px solid $colorThemeDark;
   border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .serviceIcon {
+    margin-right: 4px;
+  }
 }
 .closeButton {
   right: 10px;

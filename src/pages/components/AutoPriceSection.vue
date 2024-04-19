@@ -38,10 +38,9 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-.priceSection {
-  margin-top: 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $disabled-opacity;
-}
-</style>
+<!--<style scoped lang="scss">-->
+<!--.priceSection {-->
+<!--  padding-bottom: 10px;-->
+<!--  border-bottom: 1px solid $disabled-opacity;-->
+<!--}-->
+<!--</style>-->

@@ -59,10 +59,7 @@ export default {
       currentImage: 0
     }
   },
-  props: ['images'],
-  mounted() {
-    console.log(this.images)
-  }
+  props: ['images']
 }
 </script>
 

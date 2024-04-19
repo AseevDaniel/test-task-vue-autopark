@@ -19,3 +19,8 @@
     border-radius: 2px;
   }
 }
+
+@mixin sections-divider(){
+  padding-bottom: 12px;
+  border-bottom: 1px solid $disabled-opacity;
+}

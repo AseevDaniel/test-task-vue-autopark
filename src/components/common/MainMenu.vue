@@ -28,7 +28,7 @@ export default {
         },
         {
           title: 'Услуги',
-          route: 'services'
+          route: 'services.js'
         },
         {
           title: 'Блог',

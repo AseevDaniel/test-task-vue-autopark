@@ -8,27 +8,51 @@
       </div>
     </div>
     <div class="idSection">
-      <span class="autoId">Код товара: {{ autoInfo.id }}</span>
+      <span class="autoId opacityText">Код товара: {{ autoInfo.id }}</span>
       <span class="location">{{ autoInfo.location }}</span>
     </div>
     <AutoPriceSection :priceList="autoInfo.priceList" />
-    <div class="connectSection"></div>
-    <div class="servicesSection">
-      <ServiceItem service-title="Тест драйв" />
+    <AutoKeywords :keywords="autoInfo.keywords" :post-date="autoInfo.postInfo.postDate" />
+    <div class="connectSection">
+      <Button thin>
+        <IconPhone color="white" />
+        Показать телефон
+      </Button>
     </div>
+    <!--    <AutoServices />-->
+    <ServicesList
+      class="servicesSection"
+      list-title="Заказать услугу"
+      :services="availableAutoServices"
+    />
+    <ServicesList
+      class="servicesSection"
+      list-title="Заказать проверку"
+      :services="availableCheckServices"
+    >
+      <Button thin>Полная проверка авто</Button>
+    </ServicesList>
     <div class="checkSection"></div>
   </div>
 </template>
 
 <script>
-import ServiceItem from '@/components/common/ServiceItem.vue'
 import IconShare from '@/components/icons/IconShare.vue'
 import IconBookmark from '@/components/icons/IconBookmark.vue'
 import AutoPriceSection from '@/pages/components/AutoPriceSection.vue'
+import AutoKeywords from '@/pages/components/AutoKeywords.vue'
+import Button from '@/components/common/Button.vue'
+import IconPhone from '@/components/icons/IconPhone.vue'
+import ServicesList from '@/components/common/ServicesList.vue'
+import { availableAutoServices, availableCheckServices } from '@/constants/services.js'
+import { shallowRef } from 'vue'
 export default {
   components: {
+    ServicesList,
+    IconPhone,
+    Button,
+    AutoKeywords,
     AutoPriceSection,
-    ServiceItem,
     IconShare,
     IconBookmark
   },
@@ -37,6 +61,12 @@ export default {
     title() {
       const { brand, model, year } = this.autoInfo
       return `${brand} ${model} ${year}`
+    }
+  },
+  data() {
+    return {
+      availableAutoServices: shallowRef(availableAutoServices),
+      availableCheckServices: shallowRef(availableCheckServices)
     }
   }
 }
@@ -65,17 +95,38 @@ export default {
     align-items: center;
     justify-content: space-between;
     margin-top: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid $disabled-opacity;
     span {
       font-size: 18px;
       &.autoId {
         color: $colorThemeDark;
-        opacity: 0.6;
       }
       &.location {
         color: black;
       }
+    }
+  }
+  .priceSection {
+    margin-top: 16px;
+    @include sections-divider;
+  }
+  .keywordsSection {
+    margin-top: 12px;
+    @include sections-divider;
+  }
+  .connectSection {
+    margin-top: 20px;
+    @include sections-divider;
+    padding-bottom: 20px;
+    svg {
+      margin-right: 4px;
+    }
+  }
+  .servicesSection {
+    margin-top: 16px;
+    @include sections-divider;
+    padding-bottom: 20px;
+    .button {
+      margin-top: 12px;
     }
   }
 }

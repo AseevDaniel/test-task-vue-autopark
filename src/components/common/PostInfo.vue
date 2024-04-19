@@ -28,20 +28,14 @@
 import IconUser from '@/components/icons/IconUser.vue'
 import IconBookmark from '@/components/icons/IconBookmark.vue'
 import IconPhone from '@/components/icons/IconPhone.vue'
+import { getDatesDifference } from '@/services/date.js'
 
 export default {
   components: { IconPhone, IconBookmark, IconUser },
   props: ['postInfo'],
   computed: {
     datePostWord() {
-      const formattedDate = this.postInfo.postDate.split('.').reverse().join('-')
-      const postDate = new Date(formattedDate)
-      const todayDate = new Date()
-
-      const differenceInMs = todayDate - postDate
-      const differenceInDays = Math.floor(differenceInMs / (1000 * 60 * 60 * 24))
-
-      console.log(differenceInDays)
+      const { differenceInDays } = getDatesDifference(this.postInfo.postDate)
 
       if (differenceInDays == 0) {
         return 'Сегодня'
