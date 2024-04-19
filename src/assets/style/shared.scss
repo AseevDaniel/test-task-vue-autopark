@@ -3,6 +3,13 @@
   margin: 0 auto;
 }
 
+.detailedContainer{
+  padding: 32px;
+  &:not(:last-child){
+    border-bottom: 1px solid $disabled-opacity;
+  }
+}
+
 .clickableItem{
   cursor: pointer;
   transition: $transitionDefaultTime;

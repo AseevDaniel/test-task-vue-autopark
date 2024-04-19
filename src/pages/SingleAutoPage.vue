@@ -13,7 +13,16 @@
       <AutoMainInfo :auto-info="autoData" />
     </div>
   </section>
+
   <SectionsDivider />
+
+  <section class="container detailedContainer">
+    <AutoDescription
+      class="descriptionBlock"
+      :description="autoData.description"
+      :registrationNumber="autoData.registrationNumber"
+    />
+  </section>
 </template>
 
 <script>
@@ -24,9 +33,11 @@ import PostInfo from '@/components/common/PostInfo.vue'
 import AutoMainInfo from '@/pages/FirstScreenSection/AutoMainInfo.vue'
 import AutoMainCharacteristics from '@/pages/FirstScreenSection/AutoMainCharacteristics.vue'
 import SectionsDivider from '@/components/common/SectionsDivider.vue'
+import AutoDescription from '@/pages/DetailedInfoSection/AutoDescription.vue'
 
 export default {
   components: {
+    AutoDescription,
     SectionsDivider,
     AutoMainCharacteristics,
     AutoMainInfo,
@@ -63,7 +74,6 @@ export default {
 
 .infoBlock {
   margin-top: 38px;
-  padding-bottom: 40px;
   .mainInfo {
     display: flex;
     justify-content: space-between;
