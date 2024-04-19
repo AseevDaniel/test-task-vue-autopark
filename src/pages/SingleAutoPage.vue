@@ -23,6 +23,32 @@
       :registrationNumber="autoData.registrationNumber"
     />
   </section>
+
+  <section class="container detailedContainer">
+    <AutoCharacteristics
+      :vehicle-specifications="autoData.vehicleSpecifications"
+      :vin="autoData.vin"
+    />
+  </section>
+
+  <section class="container detailedContainer">
+    <h2>Дополнительные опции</h2>
+    <FeaturesList
+      class="featuesBlock"
+      single-column
+      :items="autoData.additionalOptions.map((item) => item.text)"
+      :tags="autoData.additionalOptions.map((item) => item.tag)"
+    />
+  </section>
+
+  <section
+    v-for="(feature, i) in autoData.allFeatures"
+    :key="i"
+    class="container detailedContainer"
+  >
+    <h2>{{ feature.title }}</h2>
+    <FeaturesList class="featuesBlock" :items="feature.items" />
+  </section>
 </template>
 
 <script>
@@ -34,9 +60,13 @@ import AutoMainInfo from '@/pages/FirstScreenSection/AutoMainInfo.vue'
 import AutoMainCharacteristics from '@/pages/FirstScreenSection/AutoMainCharacteristics.vue'
 import SectionsDivider from '@/components/common/SectionsDivider.vue'
 import AutoDescription from '@/pages/DetailedInfoSection/AutoDescription.vue'
+import FeaturesList from '@/components/common/FeaturesList.vue'
+import AutoCharacteristics from '@/pages/DetailedInfoSection/AutoCharacteristics.vue'
 
 export default {
   components: {
+    AutoCharacteristics,
+    FeaturesList,
     AutoDescription,
     SectionsDivider,
     AutoMainCharacteristics,
@@ -84,5 +114,10 @@ export default {
       }
     }
   }
+}
+
+.featuesBlock {
+  width: 80%;
+  margin-top: 20px;
 }
 </style>
