@@ -1,0 +1,26 @@
+@mixin custom-scroll($isVertical: false) {
+  padding-bottom: 4px;
+  @if $isVertical == true {
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 3px;
+    }
+  } @else {
+    &::-webkit-scrollbar {
+      height: 3px;
+      width: 0;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background: rgb(168, 168, 168);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $colorThemeDark;
+    border-radius: 2px;
+  }
+}
+
+@mixin sections-divider(){
+  padding-bottom: 12px;
+  border-bottom: 1px solid $disabled-opacity;
+}
