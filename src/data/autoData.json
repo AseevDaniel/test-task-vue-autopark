@@ -65,7 +65,7 @@
     "vinCheck": 17
   },
   "vehicleSpecifications": {
-    "mileage": 180000,
+    "mileage": "180 000 км",
     "engineCapacity": 2.7,
     "horsePower": 315,
     "mainWheel": "Полный",

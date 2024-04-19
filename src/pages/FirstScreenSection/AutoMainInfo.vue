@@ -26,21 +26,20 @@
       :services="availableAutoServices"
     />
     <ServicesList
-      class="servicesSection"
+      class="servicesSection checkSection"
       list-title="Заказать проверку"
       :services="availableCheckServices"
     >
       <Button thin>Полная проверка авто</Button>
     </ServicesList>
-    <div class="checkSection"></div>
   </div>
 </template>
 
 <script>
 import IconShare from '@/components/icons/IconShare.vue'
 import IconBookmark from '@/components/icons/IconBookmark.vue'
-import AutoPriceSection from '@/pages/components/AutoPriceSection.vue'
-import AutoKeywords from '@/pages/components/AutoKeywords.vue'
+import AutoPriceSection from '@/pages/FirstScreenSection/AutoPriceSection.vue'
+import AutoKeywords from '@/pages/FirstScreenSection/AutoKeywords.vue'
 import Button from '@/components/common/Button.vue'
 import IconPhone from '@/components/icons/IconPhone.vue'
 import ServicesList from '@/components/common/ServicesList.vue'
@@ -125,6 +124,9 @@ export default {
     margin-top: 16px;
     @include sections-divider;
     padding-bottom: 20px;
+    &.checkSection {
+      border-bottom: none;
+    }
     .button {
       margin-top: 12px;
     }
